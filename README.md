@@ -56,7 +56,7 @@ If you don't already have a such a file you should create one, and then simply i
 import '@jakesidsmith/jest-matcher-react-shallow-snapshot';
 ```
 
-If you are using TypeScript, importing this file from your setup file should apply the types needed to call `.toMatchReactShallowSnapshot`. If it doesn't then make sure that the file is included in your tsconfig.
+If you are using TypeScript, importing this file from your setup file should apply the types needed to call `.toMatchReactShallowSnapshot`. If it doesn't, then make sure that the setup file is included in your tsconfig.
 
 ## Usage
 
