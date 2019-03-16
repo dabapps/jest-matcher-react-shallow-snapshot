@@ -24,7 +24,9 @@ The output of this matcher is far more informative than other existing solutions
 npm i @jakesidsmith/jest-matcher-react-shallow-snapshot -S
 ```
 
-## Usage
+## Configuration
+
+### Jest config
 
 In your jest config add this library to `setupFilesAfterEnv`:
 
@@ -51,6 +53,25 @@ Your setup file:
 ```js
 import '@jakesidsmith/jest-matcher-react-shallow-snapshot';
 ```
+
+### TypeScript
+
+If you are using TypeScript you will need to add `./node_modules/@jakesidsmith/` to your tsconfig.json `typeRoots`:
+
+```json
+{
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./node_modules/@jakesidsmith/"
+    ]
+  }
+}
+```
+
+This just adds the types that allow you to call `.toMatchReactShallowSnapshot` on your expect statements.
+
+## Usage
 
 Now you can simply render a react component and expect it to match your shallow snapshot:
 
