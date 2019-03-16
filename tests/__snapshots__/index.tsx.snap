@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`toMatchShallowSnapshot renders a some complex components: toMatchShallowSnapshot 1`] = `
+<React.Fragment>
+  <h1>
+    Log in
+  </h1>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      name="email"
+      type="email"
+    />
+    <input
+      name="password"
+      type="password"
+    />
+    <React.memo(Button)>
+      Log in
+    </React.memo(Button)>
+  </form>
+</React.Fragment>
+`;
+
 exports[`toMatchShallowSnapshot renders some basic markup: toMatchShallowSnapshot 1`] = `
 <div>
   <p>
