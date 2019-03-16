@@ -18,6 +18,12 @@ This is a jest matcher that allows you to easily create shallow snapshots of Rea
 
 The output of this matcher is far more informative than other existing solutions, providing context of memo wrapped components, fragments, etc, and does not require importing a renderer for each of your test files.
 
+## Example
+
+```jsx
+expect(<MyComponent />).toMatchReactShallowSnapshot();
+```
+
 ## Install
 
 ```shell
