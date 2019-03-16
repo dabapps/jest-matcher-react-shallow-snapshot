@@ -1,0 +1,57 @@
+{
+  "name": "@jakesidsmith/jest-matcher-react-shallow-snapshot",
+  "version": "0.0.0",
+  "description": "A jest matcher for shallow rendered React component snapshots",
+  "main": "dist/index.js",
+  "types": "src/typings.d.ts",
+  "scripts": {
+    "dist": "./scripts/dist",
+    "prettier-check": "prettier --check '**/*.{ts,tsx,js,jsx}'",
+    "prettier": "prettier --write '**/*.{ts,tsx,js,jsx}'",
+    "lint": "npm run prettier-check && tslint --project tsconfig.json '{src,tests}/**/*.{ts,tsx}' -e '**/*.d.ts'",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "tests": "jest",
+    "test": "npm run lint && npm run typecheck && npm run tests -- --runInBand --coverage",
+    "prepublishOnly": "npm run dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakesidsmith/jest-matcher-react-shallow-snapshot.git"
+  },
+  "keywords": [
+    "react",
+    "shallow",
+    "test",
+    "renderer",
+    "snapshot"
+  ],
+  "author": "Jake 'Sid' Smith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jakesidsmith/jest-matcher-react-shallow-snapshot/issues"
+  },
+  "homepage": "https://github.com/jakesidsmith/jest-matcher-react-shallow-snapshot#readme",
+  "dependencies": {
+    "@jakesidsmith/react-shallow-renderer": "0.0.0",
+    "@types/jest": ">=24",
+    "@types/react": ">=16",
+    "@types/react-dom": ">=16",
+    "jest": ">=24",
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.13.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.3333"
+  },
+  "peerDependencies": {
+    "jest": ">=24",
+    "react": ">=16",
+    "react-dom": ">=16"
+  }
+}

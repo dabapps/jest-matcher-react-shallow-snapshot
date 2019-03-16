@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "listEmittedFiles": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "rootDir": "./src/",
+    "outDir": "./dist/"
+  },
+  "include": [
+    "./src/"
+  ]
+}
