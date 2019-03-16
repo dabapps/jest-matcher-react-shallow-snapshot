@@ -18,6 +18,10 @@ This is a jest matcher that allows you to easily create shallow snapshots of Rea
 
 The output of this matcher is far more informative than other existing solutions, providing context of memo wrapped components, fragments, etc, and does not require importing a renderer for each of your test files.
 
+This relies on [@jakesidsmith/react-shallow-renderer](https://www.npmjs.com/package/@jakesidsmith/react-shallow-renderer) under the hood, which you could use without the jest matcher if you prefer / are using another test suite.
+
+Check out the [@jakesidsmith/react-shallow-renderer](https://www.npmjs.com/package/@jakesidsmith/react-shallow-renderer) readme for some examples of the snapshot output.
+
 ## Example
 
 ```jsx
