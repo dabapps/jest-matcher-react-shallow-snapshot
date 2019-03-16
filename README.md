@@ -18,13 +18,25 @@ This is a jest matcher that allows you to easily create shallow snapshots of Rea
 
 The output of this matcher is far more informative than other existing solutions, providing context of memo wrapped components, fragments, etc, and does not require importing a renderer for each of your test files.
 
+This relies on [react-shallow-renderer](https://www.npmjs.com/package/@jakesidsmith/react-shallow-renderer) under the hood, which you could use without the jest matcher if you prefer / are using another test suite.
+
+Check out the [react-shallow-renderer](https://www.npmjs.com/package/@jakesidsmith/react-shallow-renderer) readme for some examples of the snapshot output.
+
+## Example
+
+```jsx
+expect(<MyComponent />).toMatchReactShallowSnapshot();
+```
+
 ## Install
 
 ```shell
 npm i @jakesidsmith/jest-matcher-react-shallow-snapshot -S
 ```
 
-## Usage
+## Configuration
+
+### Jest config
 
 In your jest config add this library to `setupFilesAfterEnv`:
 
@@ -51,6 +63,25 @@ Your setup file:
 ```js
 import '@jakesidsmith/jest-matcher-react-shallow-snapshot';
 ```
+
+### TypeScript
+
+If you are using TypeScript you will need to add `./node_modules/@jakesidsmith/` to your tsconfig.json `typeRoots`:
+
+```json
+{
+  "compilerOptions": {
+    "typeRoots": [
+      "./node_modules/@types/",
+      "./node_modules/@jakesidsmith/"
+    ]
+  }
+}
+```
+
+This just adds the types that allow you to call `.toMatchReactShallowSnapshot` on your expect statements.
+
+## Usage
 
 Now you can simply render a react component and expect it to match your shallow snapshot:
 
