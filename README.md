@@ -38,48 +38,25 @@ npm i @jakesidsmith/jest-matcher-react-shallow-snapshot -S
 
 ### Jest config
 
-In your jest config add this library to `setupFilesAfterEnv`:
+This library requires you to define a `setupFilesAfterEnv` entry in your jest config (or `setupTestFrameworkScriptFile` for older versions of jest).
+
+This should point to a file which will be used to initialize custom matchers:
 
 ```js
 module.exports = {
   setupFilesAfterEnv: [
-    '@jakesidsmith/jest-matcher-react-shallow-snapshot'
+    '<rootDir>/path/to/custom-matchers.js'
   ]
 };
 ```
 
-Or for older versions of jest that use `setupTestFrameworkScriptFile` you should import this library in your setup file:
-
-Jest config:
-
-```js
-module.exports = {
-  setupTestFrameworkScriptFile: './path/to/your-setup-file.js'
-};
-```
-
-Your setup file:
+If you don't already have a such a file you should create one, and then simply import this library in that file:
 
 ```js
 import '@jakesidsmith/jest-matcher-react-shallow-snapshot';
 ```
 
-### TypeScript
-
-If you are using TypeScript you will need to add `./node_modules/@jakesidsmith/` to your tsconfig.json `typeRoots`:
-
-```json
-{
-  "compilerOptions": {
-    "typeRoots": [
-      "./node_modules/@types/",
-      "./node_modules/@jakesidsmith/"
-    ]
-  }
-}
-```
-
-This just adds the types that allow you to call `.toMatchReactShallowSnapshot` on your expect statements.
+If you are using TypeScript, importing this file from your setup file should apply the types needed to call `.toMatchReactShallowSnapshot`. If it doesn't, then make sure that the setup file is included in your tsconfig.
 
 ## Usage
 
