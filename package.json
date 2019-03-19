@@ -1,6 +1,6 @@
 {
   "name": "@jakesidsmith/jest-matcher-react-shallow-snapshot",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "A jest matcher for shallow rendered React component snapshots",
   "main": "dist/index.js",
   "types": "src/typings.d.ts",
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/jakesidsmith/jest-matcher-react-shallow-snapshot#readme",
   "dependencies": {
-    "@jakesidsmith/react-shallow-renderer": "0.0.1",
+    "@jakesidsmith/react-shallow-renderer": "^1.0.0",
     "@types/jest": ">=24",
     "@types/react": ">=16",
     "@types/react-dom": ">=16",
