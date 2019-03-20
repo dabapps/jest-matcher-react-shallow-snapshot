@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/dabapps/jest-matcher-react-shallow-snapshot#readme",
   "dependencies": {
-    "@jakesidsmith/react-shallow-renderer": "^1.0.0",
+    "@dabapps/react-shallow-renderer": "^1.0.0",
     "@types/jest": ">=24",
     "@types/react": ">=16",
     "@types/react-dom": ">=16",
