@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jakesidsmith/jest-matcher-react-shallow-snapshot.git"
+    "url": "git+https://github.com/dabapps/jest-matcher-react-shallow-snapshot.git"
   },
   "keywords": [
     "react",
@@ -28,9 +28,9 @@
   "author": "Jake 'Sid' Smith",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jakesidsmith/jest-matcher-react-shallow-snapshot/issues"
+    "url": "https://github.com/dabapps/jest-matcher-react-shallow-snapshot/issues"
   },
-  "homepage": "https://github.com/jakesidsmith/jest-matcher-react-shallow-snapshot#readme",
+  "homepage": "https://github.com/dabapps/jest-matcher-react-shallow-snapshot#readme",
   "dependencies": {
     "@jakesidsmith/react-shallow-renderer": "^1.0.0",
     "@types/jest": ">=24",
