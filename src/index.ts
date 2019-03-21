@@ -1,4 +1,4 @@
-import { ReactShallowRenderer } from '@jakesidsmith/react-shallow-renderer';
+import { ReactShallowRenderer } from '@dabapps/react-shallow-renderer';
 import { toMatchSnapshot } from 'jest-snapshot';
 
 expect.extend({
