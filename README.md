@@ -31,7 +31,7 @@ expect(<MyComponent />).toMatchReactShallowSnapshot();
 ## Install
 
 ```shell
-npm i @dabapps/jest-matcher-react-shallow-snapshot -S
+npm i @dabapps/jest-matcher-react-shallow-snapshot --save-dev
 ```
 
 ## Configuration
