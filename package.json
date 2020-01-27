@@ -1,6 +1,6 @@
 {
   "name": "@dabapps/jest-matcher-react-shallow-snapshot",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A jest matcher for shallow rendered React component snapshots",
   "main": "dist/index.js",
   "types": "src/typings.d.ts",
