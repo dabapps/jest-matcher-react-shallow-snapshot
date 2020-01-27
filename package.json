@@ -1,11 +1,11 @@
 {
   "name": "@dabapps/jest-matcher-react-shallow-snapshot",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A jest matcher for shallow rendered React component snapshots",
   "main": "dist/index.js",
   "types": "src/typings.d.ts",
   "scripts": {
-    "dist": "./scripts/dist",
+    "dist": "rm -rf dist && tsc --project tsconfig.dist.json",
     "prettier-check": "prettier --check '**/*.{ts,tsx,js,jsx}'",
     "prettier": "prettier --write '**/*.{ts,tsx,js,jsx}'",
     "lint": "npm run prettier-check && tslint --project tsconfig.json '{src,tests}/**/*.{ts,tsx}' -e '**/*.d.ts'",
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/dabapps/jest-matcher-react-shallow-snapshot#readme",
   "dependencies": {
-    "@dabapps/react-shallow-renderer": "^1.0.0",
+    "@dabapps/react-shallow-renderer": "^2.0.0",
     "@types/jest": ">=24",
     "@types/react": ">=16",
     "@types/react-dom": ">=16",
@@ -43,8 +43,8 @@
   "devDependencies": {
     "prettier": "^1.16.4",
     "ts-jest": "^24.0.0",
-    "tslint": "^5.13.1",
-    "tslint-config-dabapps": "github:dabapps/tslint-config-dabapps#v0.5.3",
+    "tslint": "^5.20.1",
+    "tslint-config-dabapps": "^0.6.2",
     "typescript": "^3.3.3333"
   },
   "peerDependencies": {
